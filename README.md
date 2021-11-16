@@ -1,5 +1,5 @@
 # ISS_management_system
-##employees
--> name
--> usid
--> 
+## abhijeet ->   adminstration & products
+## abhishek ->   employees & inventry
+## arun ->       pantry & research
+# pahul ->       projects(c)
