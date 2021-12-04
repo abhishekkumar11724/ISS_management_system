@@ -131,6 +131,8 @@ Gender CHAR(5)
 DESC current_staff;
 
 CREATE TABLE mission_overview (
+service_id varchar(10),
+FOREIGN KEY (service_id) REFERENCES current_staff,
 Timeline DATE NOT NULL,
 Expedition_NO BIGINT NOT NULL,
 Expedition_Name VARCHAR(25),
