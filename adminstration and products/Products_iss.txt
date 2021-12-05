@@ -1,0 +1,48 @@
+ CREATE TABLE Products
+(
+Apps VARCHAR(100),
+Audio_and_Ringtone VARCHAR(100),
+Ebooks VARCHAR(100),
+Podcast VARCHAR(100)
+);
+
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Selfies", " APU Shutdown ", "Not YET IMAGINED", " NASA's curious universe");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Augmented AR", " Computers are in control ", "Beyond the tube and wing", " Houston,We Have a Podcast");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Spinoff", " Go at throttle up ", "Green LIght for Green Flight", " NASA's curious universe");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("3D Sun", " Go for Deploy ", "Promise Denied", " NASA's curious universe");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Asteroid Redirect Mission(ARM)", " How do you read "," Three sigma leadership "," On a Mission");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Cassini", " Lookin' at it ", " Earth at night ", " The Invisible Network");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Curiosity", " MECO ", "Eart At Night", " Gravity Assist");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Go StarGaze", " Nice to be in orbit ", "Hubble Focus:Galaxies through Space and Time", " Welcome to Rocket Ranch");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Grail Mission App", " Press to ATO ", "Origins", " NASA in Silicon Valley");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("MESSENGER: Orbiting Mercury", " Roger Roll ", "ISS:Operating an outpost", "NASA Explorers: Apollo");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Moon Tours", " STS 26 litoff ", "Earth Book", " This WEEk @NASA");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Be A Martian", " Sound of Launch ", "Beyond Earth", " Space to Ground");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA HIAD", " Vector transfer ", "The power of Flight", " What's up?");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Science: A Journey of Discovery", " Wheelstop ", "Through the eyes of Cassini", " Small Steps Giant Leaps");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Space Weather App", " We are going to dust it off First ", "Making the invisible Visible", " NASA ScienceCast");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Visualization Explorer", " That was definately an E-ticket ", "ISS:Benfits of humanity", " NASA Edge");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Space Communications and Navigation: NetworKing", " Litoff ", "ISS:Benfits of humanity(2nd)", " NASA 360");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Spacecraft 3D", " Litoff 2.0 ", "ISS:Benfits of humanity(3rd)", " NASA X");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Space Junk Sammy", " Sound of Launch ", "Walking to Olympus", " NASACast");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Hubblesite", " Shuttle Gear Drop ", "Unlimted Horizons", " __ ");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Night Sky Network", " Countdown to Launch ", "Elegance in Flight", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Science: A Journey of Discovery", " Launch Commentry ", "Cave the winds", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Space365", " Landing Commander Comments ", "Global each", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Space Images", " Landing Comments ", "A new twist in Flight Research", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Space Weather Media Viewer", " Fireflies ", "Sweeping Foreward", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("X-Ray Universe (Chandra X-Ray Observatory)", " Godspeed ", "iMagnetic Space", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Aquarius", " Zero G ", "Thinking Obliquely", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Earth as Art", " Status Update ", "Earth as Art", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Earth-Now", " Chourus Radio Within Eart's Atmoshphere ", "Pursuit of Power", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Globe Observer", " Quinder-Sound 1 ", "The Apollo of Aeronautics", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Images of Change", " Quinder-Sound 2 ", "When Biospheres Collide", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Science: A Journey of Discovery", " Beep ", "Breaking the Mishap Chain", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Night Sky Network", " SLS Test FIRE ", "Psychology of Space Exploration", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Space Weather Media Viewer", " SLS Test Fire ", "Cosmos & Culture", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Rescue 406", " APU Shutdown ", "Modelling Flight", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Satellite Insight: A GOES-R Game", " Plasma Sounds ", "Rockets & People Vol.1", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Space Images", " Launch ", "Rockets & People Vol.4", " __");
+INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Glenn Research Center: The Early Years", " Stardust ", "Rockets & People Vol.3", " __");
+
+
