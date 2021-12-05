@@ -574,4 +574,31 @@ INSERT INTO Research(Research,Category, Organisation,Researcher,Overview) VALUES
 INSERT INTO Research(Research,Category, Organisation,Researcher,Overview) VALUES("Proboy (Puncture)","Technology Demonstration Research","Roscosmos","Elena Serova","Proboy (Puncture) [Roscos - mos] tests a method associ - ated with fast detection of point of puncture coordi - nates in the ISS module hull (made by a high-speed micrometeoroid or techno - genic particles) with detec - tion of acoustic waves in the module’s cabin air");
 INSERT INTO Research(Research,Category, Organisation,Researcher,Overview) VALUES("Vibrolab","Technology Demonstration Research","Roscosmos","Roman Romanenko","Vibrolab [Roscosmos] tests and fine-tunes methods and instruments for monitoring of microaccelerations aboard the ISS Russian Segment associated with implementation of research programs in a microgravity environment");
 
+/* queries on DB*/
+show databases;
+use iss_project;
+
+select * from current_staff where gender = " M ";
+
+select * from Nutritional_Value where energy > 100 AND protien < 60;
+
+select * from Nutritional_Value where fat <50 order by carbohydrates DESC;
+
+select * from food_items inner join nutritional_values
+where food_items.food_name = nutritional_values.food_name;
+
+select emp_name, expedition from employees
+where emp_age <80
+union
+select country_name from international_partners;
+
+select emp_name, emp_nationality from employees
+group by emp_nationality
+order by emp_name;
+
+select emp_nationality,count(emp_nationality) from employees
+group by emp_nationality
+having count(emp_nationality)>4;
+
+
 
