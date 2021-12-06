@@ -59,15 +59,15 @@ PRIMARY KEY(Machine_id)
 
 /*  PANTRY AND RESEARCH  */
 
-CREATE TABLE Food_items
+CREATE TABLE Fooditem
 (
 Food_id INT AUTO_INCREMENT PRIMARY KEY,
-Food_name VARCHAR(50) NOT NULL,
-Item_category VARCHAR(50) NOT NULL,
-Food_type VARCHAR(50)
+Foodname VARCHAR(50) NOT NULL,
+Itemcategory VARCHAR(50) NOT NULL,
+Foodtype VARCHAR(50)
 );
 
-CREATE TABLE Nutritional_Values
+CREATE TABLE Nutritional_Value
 (
 Food_id INT PRIMARY KEY AUTO_INCREMENT,
 FOREIGN KEY (Food_id) REFERENCES Food_items(food_id),
@@ -125,18 +125,20 @@ CREATE TABLE current_staff(
 ServiceID VARCHAR(50),
 FName VARCHAR(25),
 LName VARCHAR(25),
-Gender CHAR(5)
+Gender CHAR(5),
+primary key (serviceid)
 );
 
 DESC current_staff;
 
 CREATE TABLE mission_overview (
-service_id varchar(10),
-FOREIGN KEY (service_id) REFERENCES current_staff,
+serviceid varchar(50),
 Timeline DATE NOT NULL,
 Expedition_NO BIGINT NOT NULL,
 Expedition_Name VARCHAR(25),
-Expedetion_Status CHAR(15)
+Expedetion_Status CHAR(15),
+primary key (serviceid),
+FOREIGN KEY (serviceid) REFERENCES current_staff(ServiceID)
 );
     
 DESC mission_overview;
@@ -241,11 +243,11 @@ insert into experiments values
 
 /* product & adminstrations */
 
-INSERT INTO international_partners (Country_name,Agency_participated,Acronymys) VALUES (" United States "," National Aeronautics and Space Adminstration "," NASA ");
-INSERT INTO international_partners (Country_name,Agency_participated,Acronymys) VALUES (" Russia "," Roscosmos State Corporation for Space Activities "," ROSCOSMOS ");
-INSERT INTO international_partners (Country_name,Agency_participated,Acronymys) VALUES (" Canada "," Canadian Space Agency "," CSA ");
-INSERT INTO international_partners (Country_name,Agency_participated,Acronymys) VALUES (" Japan "," Japan Aerospace EXploration Agency "," JAXA ");
-INSERT INTO international_partners (Country_name,Agency_participated,Acronymys) VALUES (" European Union (EU)  "," European Space Agency "," ESA ");
+INSERT INTO international_partners  VALUES (" United States "," National Aeronautics and Space Adminstration "," NASA ");
+INSERT INTO international_partners  VALUES (" Russia "," Roscosmos State Corporation for Space Activities "," ROSCOSMOS ");
+INSERT INTO international_partners  VALUES (" Canada "," Canadian Space Agency "," CSA ");
+INSERT INTO international_partners  VALUES (" Japan "," Japan Aerospace EXploration Agency "," JAXA ");
+INSERT INTO international_partners  VALUES (" European Union (EU)  "," European Space Agency "," ESA ");
 
 
 select * from current_staff;
@@ -260,14 +262,14 @@ INSERT INTO current_staff (ServiceID,FName,LName,Gender) VALUES ("ast2100244"," 
 
 
 
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-10-17 "," 65 "," Soyuz MS-18 Land"," Completed");
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-10-21 "," 64 "," ISS Progress 79 Launch "," Completed ");
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-10-29 "," 63 "," ISS Progress 79 Dock   "," Completed ");
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-11-08 "," 62 "," Crew 2 Undock "," Completed ");
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-11-08 "," 61 "," Crew 2 Splashdown "," Completed ");
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-11-10 "," 60 "," Crew 3 Launch "," Completed ");
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-11-11 "," 59 "," Crew 3 Dock   "," Completed ");
-INSERT INTO mission_overview (Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES (" 2021-11-21 "," 58 "," Cygnus CRS 16 Release "," Completed ");
+INSERT INTO mission_overview (service_id,Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES ("ast2100238"," 2021-10-17 "," 65 "," Soyuz MS-18 Land"," Completed");
+INSERT INTO mission_overview (service_id,Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES ("ast2100239"," 2021-10-21 "," 64 "," ISS Progress 79 Launch "," Completed ");
+INSERT INTO mission_overview (service_id,Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES ("ast2100240"," 2021-10-29 "," 63 "," ISS Progress 79 Dock   "," Completed ");
+INSERT INTO mission_overview (service_id,Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES ("ast2100241"," 2021-11-08 "," 62 "," Crew 2 Undock "," Completed ");
+INSERT INTO mission_overview (service_id,Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES ("ast2100242"," 2021-11-08 "," 61 "," Crew 2 Splashdown "," Completed ");
+INSERT INTO mission_overview (service_id,Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES ("ast2100243"," 2021-11-10 "," 60 "," Crew 3 Launch "," Completed ");
+INSERT INTO mission_overview (service_id,Timeline,Expedition_NO,Expedition_Name,Expedetion_Status) VALUES ("ast2100244"," 2021-11-11 "," 59 "," Crew 3 Dock   "," Completed ");
+
 
 INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("NASA Selfies", " APU Shutdown ", "Not YET IMAGINED", " NASA's curious universe");
 INSERT INTO Products (Apps,Audio_and_Ringtone,Ebooks,Podcast) VALUES ("Augmented AR", " Computers are in control ", "Beyond the tube and wing", " Houston,We Have a Podcast");
@@ -577,20 +579,18 @@ INSERT INTO Research(Research,Category, Organisation,Researcher,Overview) VALUES
 /* queries on DB*/
 show databases;
 use iss_project;
+select * from employees;
+select * from current_staff;
+select * from electrical_items;
+select * from tools;
+select * from employees;
 
-select * from current_staff where gender = " M ";
+
+select fname,lname from current_staff where gender = 'M';
 
 select * from Nutritional_Value where energy > 100 AND protien < 60;
 
 select * from Nutritional_Value where fat <50 order by carbohydrates DESC;
-
-select * from food_items inner join nutritional_values
-where food_items.food_name = nutritional_values.food_name;
-
-select emp_name, expedition from employees
-where emp_age <80
-union
-select country_name from international_partners;
 
 select emp_name, emp_nationality from employees
 group by emp_nationality
@@ -599,6 +599,5 @@ order by emp_name;
 select emp_nationality,count(emp_nationality) from employees
 group by emp_nationality
 having count(emp_nationality)>4;
-
 
 
